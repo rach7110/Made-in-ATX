@@ -89,6 +89,7 @@ line-height: 72px;
 text-transform: uppercase;
 text-align: center;
 color: lightblue;
+margin-top: 10px;
 }
 
 h2,h3{
@@ -99,11 +100,13 @@ h2,h3{
   text-align: center;
   color: #E8A90B;
   font-size: 30px;
+  line-height: 10px;
 }
 
 h3{
   font-size: 25px;
   color: white;
+  padding-bottom: 10px;
 
 }
 
@@ -134,10 +137,6 @@ select {
 
 .list {
   text-align: left;
-}
-
-hr{
-  background-color: gray;
 }
 
 input {
@@ -174,4 +173,41 @@ width: 100%;
 /*  border-color: pink;
   border-style: solid;*/
 
+}
+
+/*.center {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+  border-style: solid;
+  width: 50%;
+
+}*/
+
+.fixed{
+  width: 100%;
+  position: fixed;
+/*  border-style: solid;
+  border-color: gray;
+  border-size: 1px;*/
+  padding-bottom: 20px;
+}
+
+th.inner{
+width: 475px;
+position: relative;
+padding-bottom: 20px;
+
+
+}
+th.inner2{
+width: 475px;
+position: relative;
+
+}
+
+
+td {
+  width: 375px;
+  line-height: 25px;
 }

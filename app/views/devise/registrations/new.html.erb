@@ -1,9 +1,4 @@
 
-
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 
@@ -13,6 +8,10 @@
 <br>
 <br>
 <br>
+
+<br>
+<br>
+
 <br>
 <br>
 <br>
@@ -20,11 +19,20 @@
 <br>
 <br>
 
+<br>
+
+<br>
+<br>
 
 
-<div class = "scrollblock" id="test">
+<br>
+<br>
+<br>
+
+<div class = "scrollblock" >
 <div id = "center">
 <h1>ATX Tech</h1>
+
 
 
 <h2>Sign Up for An Account</h2>
@@ -44,3 +52,14 @@
 <% end %>
 <p> Already have an account? <%= link_to "Sign In.", "users/sign_in" %> </p>
 </div>
+
+
+$(window).scroll(function () {
+   $('[class="formclass"]').each(function () { // <---loop the divs id starts with #box 
+      if (($(this).offset().top - $(window).scrollTop()) < 20) { //<---mark the $(this).offset().top of current object
+          $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
+      } else {
+          $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
+      }
+   });
+});

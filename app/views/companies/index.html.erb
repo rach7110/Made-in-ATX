@@ -44,75 +44,81 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p class="list"> Need to Add..<p>
+<!-- <p class="list"> Need to Add..<p>
 <ul>
     <li class="strike">Sorting by Category</li>
     <li>Javascript - Hover Effects</li>
     <li class = "strike">Fixed Background</li>
-    <li class = "strike">Meetup API Integration?</li>
-</ul>
-<hr>
-<p> <form><select name="select"><option>Category></option><option>Category 2</option></select></form>
+    <li class = "strike">Meetup API Integration?</li> -->
+<!-- </ul> -->
 
 
+<br>
+<br>
+<div class = "center">
 <table>
-  <tr>
-    <th><%= link_to "Name", :sort=> "name" %></th>
-    <th><%= link_to "Category", :sort=>"category" %></th>
-    <th><%= link_to "Description", :sort=>"description" %></th>
-    <th><%= link_to "Address #1", :sort=>"address1" %>Address1</th>
-    <th><%= link_to "Address #2", :sort=>"address2" %></th>
-    <th><%= link_to "Website", :sort=>"website" %></th>
-    <th></th>
-    <th></th>
-    <th></th>
+  <tr class = "fixed">
+    <th class = "inner"><%= link_to "Name", :sort=> "name" %></th>
+    <th class = "inner2"><%= link_to "Category", :sort=>"category" %></th>
+    <th class = "inner"><%= link_to "Description", :sort=>"description" %></th>
+    <th class = "inner2"><%= link_to "Website", :sort=>"website" %></th>
   </tr>
+  <tr>
+    <th class = "inner"></th>
+    <th class = "inner"></th>
+    <th class = "inner"></th>
+    <th class = "inner"></th>
+</tr>
 
 <% @companies.each do |company| %>
   <tr>
     <td><%= company.name %></td>
     <td><%= company.category %></td>
     <td><%= company.description %></td>
-    <td><%= company.address1 %></td>
-    <td><%= company.address2 %></td>
     <td><%= link_to company.website, company.website %></td>
-    <td><%= link_to 'Show', company %></td>
+<!--     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
-    <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
   </tr>
 <% end %>
 </table>
 
-<br />
+</div>
 
 
+
+// <script>
+// $(window).bind('scroll', function(){
+// if($(this).scrollTop() > 200) {
+// $("#theTab").show();
+// }
+// });
+// </script>
 <script>
-$(window).bind('scroll', function(){
-if($(this).scrollTop() > 200) {
-$("#theTab").show();
-}
+$(document).ready (function () {
+// $("table tr:first").css("position", "fixed", "text-align", "center");
+$(window).scroll(function () {
+   $('td').each(function () { // <---loop the divs id starts with #box 
+       if (($(this).offset().top - $(window).scrollTop()) < 710) { //<---mark the $(this).offset().top of current object
+          $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
+      } else {
+          $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
+        }
+   });
 });
+});
+
+
+
+// $(window).scroll(function () {
+//    $('[id^="box"]').each(function () { // <---loop the divs id starts with #box 
+//       if (($(this).offset().top - $(window).scrollTop()) < 1000) { //<---mark the $(this).offset().top of current object
+//           $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
+//       } else {
+//           $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
+//       }
+//    });
+// });
+
+
 </script>
-
-
-<!-- if ($('body').scrollTop() > 100) { $('h1').first().show() }
-
-$($'body')
-
-While a user scroll
-for each element
-if element position is 500
-element is faded out
-
- -->
-
