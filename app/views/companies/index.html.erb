@@ -1,38 +1,12 @@
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class = "scrollblock" id="test">
+<div class = "scrollblock withOverflowingBackground" id="test">
 <div id = "center">
 <h1 >ATX Tech</h1>
 <h2> A listing of technology companies located in Austin, TX. </h2>
 <h4 class = "pink"> Total Companies Listed: <%= Company.all.length %> </h3>
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 <div class = "center">
@@ -86,19 +60,19 @@
 // }
 // });
 // </script>
-// <script>
-$(document).ready (function () {
-// $("table tr:first").css("position", "fixed", "text-align", "center");
-$(window).scroll(function () {
-   $('td').each(function () { // <---loop the divs id starts with #box 
-       if (($(this).offset().top - $(window).scrollTop()) < 470) { //<---mark the $(this).offset().top of current object
-          $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
-      } else {
-          $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
-        }
-   });
-});
-});
+// // <script>
+// $(document).ready (function () {
+// // $("table tr:first").css("position", "fixed", "text-align", "center");
+// $(window).scroll(function () {
+//    $('td').each(function () { // <---loop the divs id starts with #box 
+//        if (($(this).offset().top - $(window).scrollTop()) < 470) { //<---mark the $(this).offset().top of current object
+//           $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
+//       } else {
+//           $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
+//         }
+//    });
+// });
+// });
 
 
 
