@@ -2,7 +2,8 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    # @companies = Company.all
+      @companies = Company.order(params[:sort])
 
     respond_to do |format|
       format.html # index.html.erb

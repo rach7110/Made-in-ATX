@@ -1,13 +1,53 @@
-<h1>Listing companies</h1>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class = "scrollblock">
+<h1 id="test">ATX Tech</h1>
+<h2> A listing of technology companies located in Austin, TX. </h2>
+<h3> Wanna add your company? Click <%=link_to "here", new_company_path %></h3>
+</div>
+
+<p class="list"> Need to Add..<p>
+<ul>
+    <li>Sorting by Category</li>
+    <li>Javascript - Hover Effects</li>
+    <li>Parallax</li>
+    <li>Meetup API Integration?</li>
+</ul>
+<hr>
+<p> <form><select name="select"><option>Category></option><option>Category 2</option></select></form>
+
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>Address1</th>
-    <th>Address2</th>
-    <th>Website</th>
+    <th><%= link_to "Name", :sort=> "name" %></th>
+    <th><%= link_to "Category", :sort=>"category" %></th>
+    <th><%= link_to "Description", :sort=>"description" %></th>
+    <th><%= link_to "Address #1", :sort=>"address1" %>Address1</th>
+    <th><%= link_to "Address #2", :sort=>"address2" %></th>
+    <th><%= link_to "Website", :sort=>"website" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,7 +60,7 @@
     <td><%= company.description %></td>
     <td><%= company.address1 %></td>
     <td><%= company.address2 %></td>
-    <td><%= company.website %></td>
+    <td><%= link_to company.website, company.website %></td>
     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
     <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,4 +70,18 @@
 
 <br />
 
-<%= link_to 'New Company', new_company_path %>
+
+
+// <script type="text/javascript">
+$(document).ready(function() {
+    var scrollorama = $.scrollorama({
+        blocks:'.scrollblock'
+
+.animate('#fade-in',{ delay: 400, duration: 300, property:'opacity', start:0 })
+});
+
+//     </script>
+
+
+
+
