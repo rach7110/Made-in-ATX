@@ -1,6 +1,5 @@
 
 
-
 <br>
 <br>
 <br>
@@ -13,7 +12,7 @@
 <br>
 <br>
 <br>
-<br>
+
 <br>
 <br>
 <br>
@@ -22,19 +21,45 @@
 <br>
 
 
-
-<div class = "scrollblock">
-<h1 id="test">ATX Tech</h1>
+<div class = "scrollblock" id="test">
+<div id = "center">
+<h1 >ATX Tech</h1>
 <h2> A listing of technology companies located in Austin, TX. </h2>
 <h3> Wanna add your company? Click <%=link_to "here", new_company_path %></h3>
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p class="list"> Need to Add..<p>
 <ul>
-    <li>Sorting by Category</li>
+    <li class="strike">Sorting by Category</li>
     <li>Javascript - Hover Effects</li>
-    <li>Parallax</li>
-    <li>Meetup API Integration?</li>
+    <li class = "strike">Fixed Background</li>
+    <li class = "strike">Meetup API Integration?</li>
 </ul>
 <hr>
 <p> <form><select name="select"><option>Category></option><option>Category 2</option></select></form>
@@ -71,17 +96,23 @@
 <br />
 
 
-
-// <script type="text/javascript">
-$(document).ready(function() {
-    var scrollorama = $.scrollorama({
-        blocks:'.scrollblock'
-
-.animate('#fade-in',{ delay: 400, duration: 300, property:'opacity', start:0 })
+<script>
+$(window).bind('scroll', function(){
+if($(this).scrollTop() > 200) {
+$("#theTab").show();
+}
 });
-
-//     </script>
-
+</script>
 
 
+<!-- if ($('body').scrollTop() > 100) { $('h1').first().show() }
+
+$($'body')
+
+While a user scroll
+for each element
+if element position is 500
+element is faded out
+
+ -->
 
