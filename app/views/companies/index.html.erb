@@ -1,11 +1,5 @@
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <br>
 <br>
@@ -25,7 +19,7 @@
 <div id = "center">
 <h1 >ATX Tech</h1>
 <h2> A listing of technology companies located in Austin, TX. </h2>
-<h3> Wanna add your company? Click <%=link_to "here", new_company_path %></h3>
+<h4 class = "pink"> Total Companies Listed: <%= Company.all.length %> </h3>
 </div>
 </div>
 <br>
@@ -34,40 +28,38 @@
 <br>
 <br>
 <br>
-
 <br>
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<!-- <p class="list"> Need to Add..<p>
-<ul>
-    <li class="strike">Sorting by Category</li>
-    <li>Javascript - Hover Effects</li>
-    <li class = "strike">Fixed Background</li>
-    <li class = "strike">Meetup API Integration?</li> -->
-<!-- </ul> -->
 
 
-<br>
-<br>
 <div class = "center">
 <table>
   <tr class = "fixed">
     <th class = "inner"><%= link_to "Name", :sort=> "name" %></th>
-    <th class = "inner2"><%= link_to "Category", :sort=>"category" %></th>
+    <th class = "inner"><%= link_to "Category", :sort=>"category" %></th>
     <th class = "inner"><%= link_to "Description", :sort=>"description" %></th>
-    <th class = "inner2"><%= link_to "Website", :sort=>"website" %></th>
+    <th class = "inner"><%= link_to "Website", :sort=>"website" %></th>
   </tr>
+    <tr class = "fixed">
+    <th class = "inner"><p></p></th>
+    <th class = "inner"><p></p> </th>
+    <th class = "inner"><p></p></th>
+    <th class = "inner"><p></p></th>
+</tr>
   <tr>
-    <th class = "inner"></th>
-    <th class = "inner"></th>
-    <th class = "inner"></th>
-    <th class = "inner"></th>
+    <th class = "inner2"><p></p></th>
+    <th class = "inner2"><p></p> </th>
+    <th class = "inner2"><p></p></th>
+    <th class = "inner2"><p></p></th>
+</tr>
+  <tr>
+    <th class = "inner2"></th>
+    <th class = "inner2"></th>
+    <th class = "inner2"></th>
+    <th class = "inner2"></th>
 </tr>
 
 <% @companies.each do |company| %>
@@ -94,12 +86,12 @@
 // }
 // });
 // </script>
-<script>
+// <script>
 $(document).ready (function () {
 // $("table tr:first").css("position", "fixed", "text-align", "center");
 $(window).scroll(function () {
    $('td').each(function () { // <---loop the divs id starts with #box 
-       if (($(this).offset().top - $(window).scrollTop()) < 710) { //<---mark the $(this).offset().top of current object
+       if (($(this).offset().top - $(window).scrollTop()) < 470) { //<---mark the $(this).offset().top of current object
           $(this).stop().fadeTo(100, 0); //<----fadeOut the current obj
       } else {
           $(this).stop().fadeTo('fast', 1); //<----fadeIn the current obj
