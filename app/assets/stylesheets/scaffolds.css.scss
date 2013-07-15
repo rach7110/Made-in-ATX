@@ -1,7 +1,7 @@
 body {
   background-color: black; /*#0B2E59;*/
   background-image: url('austin-texas-skyline-2873454-o.jpg');
-  background-size: 100% 500px;
+  background-size: 100% 350px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: gray;
@@ -84,9 +84,12 @@ line-height: 72px;
 text-transform: uppercase;
 text-align: center;
 color: lightblue;
+margin-top: 10px;
+padding-bottom: 0px;
+margin-bottom: -15px;
 }
 
-h2,h3{
+h2,h3,h4{
   font-family: Lato;
   font-style: normal;
   font-variant: normal;
@@ -94,12 +97,22 @@ h2,h3{
   text-align: center;
   color: #E8A90B;
   font-size: 30px;
+  line-height: 10px;
+
 }
 
 h3{
-  font-size: 25px;
+  font-size: 20px;
   color: white;
+  padding-bottom: 10px;
 
+}
+
+h4 {
+  font-size: 40px;
+  color: pink;
+  padding-bottom: 0px;
+  margin-bottom: -15px;
 }
 
 th {
@@ -129,10 +142,6 @@ select {
 
 .list {
   text-align: left;
-}
-
-hr{
-  background-color: gray;
 }
 
 input {
@@ -169,4 +178,54 @@ width: 100%;
 /*  border-color: pink;
   border-style: solid;*/
 
+}
+
+/*.center {
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+  border-style: solid;
+  width: 50%;
+
+}*/
+
+.fixed{
+  width: 100%;
+  position: fixed;
+/*  border-style: solid;
+  border-color: gray;
+  border-size: 1px;*/
+  padding-bottom: 20px;
+}
+
+th.inner{
+width: 475px;
+position: relative;
+padding-bottom: 5px;
+border-style: solid none;
+border-width: 1px;
+
+
+}
+th.inner2{
+width: 475px;
+position: relative;
+padding-bottom: 5px;
+
+}
+
+
+td {
+  width: 375px;
+  line-height: 25px;
+}
+
+hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pink {
+  color: pink;
 }
