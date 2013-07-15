@@ -1,7 +1,8 @@
 <%= simple_form_for(@company) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+
+  <div class="form-inputs formclass">
     <%= f.input :name %>
     <%= f.input :category %>
     <%= f.input :description %>
@@ -10,7 +11,7 @@
     <%= f.input :website %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions formclass">
     <%= f.button :submit %>
   </div>
 <% end %>
