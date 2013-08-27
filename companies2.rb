@@ -27,7 +27,7 @@ while number < 10
     companies << company_hash
     puts "Company: #{result["name"]}"
 
-   Company.create name: result["name"], category: result["category_code"], description: result["description"], address1: result["address1"], address2: result["address2"], website: result["homepage_url"]
+    Company.create name: result["name"], category: result["category_code"], description: result["description"], address1: result["address1"], address2: result["address2"], website: result["homepage_url"]
 
     # How many categories do we have?
     if !categories_array.include?(result["category_code"])
